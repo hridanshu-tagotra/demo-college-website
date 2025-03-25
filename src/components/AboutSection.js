@@ -9,7 +9,11 @@ const AboutSection = () => {
       spacing={2}
       alignItems="center"
       justifyContent="center"
-      sx={{ px: 15, pt:6,pb:3 }}
+      sx={{ 
+        px: { xs: 2, md: 15 }, // Responsive horizontal padding
+        pt: 6,
+        pb: 3 
+      }}
     >
       {/* Left side: Rounded image (no hover effect) */}
       <Grid item xs={12} md={5}>
@@ -23,7 +27,6 @@ const AboutSection = () => {
             boxShadow: 2,
             display: "block",
             objectFit: "cover",
-
           }}
         />
       </Grid>
@@ -35,8 +38,7 @@ const AboutSection = () => {
             backgroundColor: "#9EA2A6",
             borderRadius: 2,
             boxShadow: 2,
-            p: 3,
-            position: "relative",
+            p: { xs: 2, md: 3 }, // Responsive padding for mobile & desktop\n            position: "relative",
             zIndex: 2,
             ml: { xs: 0, md: "-50px" },
             mt: { xs: 2, md: 0 },
@@ -44,7 +46,6 @@ const AboutSection = () => {
             "&:hover": {
               transform: "scale(1.03)",
               boxShadow: 6,
-
             },
           }}
         >
@@ -68,22 +69,31 @@ const AboutSection = () => {
             and university, setting you on the path to success.
           </Typography>
 
-          <Button
-            variant="contained"
-            sx={{
-              backgroundColor: "#4B5320",
-              color: "#FFF",
-              borderRadius: "20px",
-              px: 3,
-              py: 1,
-              boxShadow: "none",
-              "&:hover": {
-                backgroundColor: "#3E471B",
-              },
-            }}
-            onClick={() => window.open("https://www.getmycollege.com/colleges/top-pu-colleges-in-bangalore", "_blank", "noopener,noreferrer")}          >
-            Know More
-          </Button>
+          <Box sx={{ textAlign: "center" }}>
+            <Button
+              variant="contained"
+              sx={{
+                backgroundColor: "#4B5320",
+                color: "#FFF",
+                borderRadius: "20px",
+                px: 3,
+                py: 1,
+                boxShadow: "none",
+                "&:hover": {
+                  backgroundColor: "#3E471B",
+                },
+              }}
+              onClick={() =>
+                window.open(
+                  "https://www.getmycollege.com/colleges/top-pu-colleges-in-bangalore",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
+            >
+              Know More
+            </Button>
+          </Box>
         </Box>
       </Grid>
     </Grid>

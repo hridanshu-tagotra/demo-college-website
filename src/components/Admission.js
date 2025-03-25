@@ -69,11 +69,11 @@ doors to prestigious universities and fulfilling career paths. ❞`;
         sx={{
           py: 8, // Reduced vertical padding
           px: { xs: 2, md: 4 },
-          background: "#F5F5F0",
+          background: "white",
         }}
       >
         {/* Title & Description */}
-        <Box sx={{ textAlign: "center", mb: 4, px: { xs: 2, md: 0 } }}>
+        <Box sx={{ textAlign: "center", mb: 10, px: { xs: 2, md: 0 } }}>
           <Typography
             variant="h5"
             sx={{

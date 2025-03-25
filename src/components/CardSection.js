@@ -72,7 +72,7 @@ const colleges = [
   },
   {
     id: 7,
-    name: "Ramaiah Composite Pre-University College",
+    name: "Ramaiah Composite College",
     image: Rama,
     board: "State Board",
     gender: "Co-ed",
@@ -123,7 +123,7 @@ const colleges = [
 const CardSection = () => {
   return (
     <Box sx={{ textAlign: "center", py: 5, px: 2 }}>
-      <Typography variant="h3" sx={{ mb: 4,fontWeight:'bolder' }}>
+      <Typography variant="h3" sx={{fontSize:'30px', mb: 4,fontWeight:'bolder' }}>
         Explore Top PU Colleges in Bangalore for Science
       </Typography>
       <Grid container spacing={3} justifyContent="center">
@@ -217,7 +217,7 @@ const CardSection = () => {
                     sx={{
                       backgroundColor: "#4B5320",
                       color: "#FFF",
-                      borderRadius: "20px",
+                      borderRadius: "10px",
                       px: 3,
                       py: 1,
                       boxShadow: "none",

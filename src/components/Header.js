@@ -31,12 +31,12 @@ const Header = () => {
 
   // Drawer content for mobile
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center", p: 2 }}>
-      <Box sx={{ mb: 2 }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center", p: 0.5 }}>
+      <Box sx={{ mb: 0.5 }}>
         <img
           src={logo}
           alt="Logo"
-          style={{ height: "50px", cursor: "pointer" }}
+          style={{ height: "60px", cursor: "pointer" }}
         />
       </Box>
       <List>
@@ -44,7 +44,11 @@ const Header = () => {
           <ListItem key={item} disablePadding>
             <ListItemButton
               sx={{ textAlign: "center" }}
-              component={["Home", "About us", "Academics", "Admissions"].includes(item) ? Link : "a"}
+              component={
+                ["Home", "About us", "Academics", "Admissions"].includes(item)
+                  ? Link
+                  : "a"
+              }
               {...(item === "Home" && { to: "/" })}
               {...(item === "About us" && { to: "/about" })}
               {...(item === "Academics" && { to: "/academics" })}
@@ -73,18 +77,17 @@ const Header = () => {
           backgroundColor: "whitesmoke",
           backgroundSize: "cover",
           backgroundPosition: "top 10px",
-          p: 2,
+          p: '1px', // Further reduced padding
           alignItems: "center",
         }}
       >
         <Grid item xs={6}>
-          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 3,px:5 }}>
             <img
               src={logo}
               alt="Logo"
               style={{
-                height: isMobile ? "40px" : "100px",
-                cursor: "pointer",
+                height: isMobile ? "60px" : "120px", // Increased logo size remains\n                cursor: "pointer",
               }}
               onClick={() =>
                 window.open(
@@ -101,7 +104,7 @@ const Header = () => {
             )}
           </Box>
         </Grid>
-        <Grid item xs={6} sx={{ display: "flex", justifyContent: "flex-end" }}>
+        <Grid item xs={6} sx={{ display: "flex", justifyContent: "flex-end",px:5 }}>
           {isMobile ? (
             <IconButton
               color="inherit"
@@ -112,11 +115,15 @@ const Header = () => {
               <MenuIcon />
             </IconButton>
           ) : (
-            <Box sx={{ display: "flex", gap: 3 }}>
+            <Box sx={{ display: "flex", gap: 1 }}>
               {menuItems.map((item) => (
                 <Button
                   key={item}
-                  component={["Home", "About us", "Academics", "Admissions"].includes(item) ? Link : "a"}
+                  component={
+                    ["Home", "About us", "Academics", "Admissions"].includes(item)
+                      ? Link
+                      : "a"
+                  }
                   {...(item === "Home" && { to: "/" })}
                   {...(item === "About us" && { to: "/about" })}
                   {...(item === "Academics" && { to: "/academics" })}

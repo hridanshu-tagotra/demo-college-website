@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid, Typography, Paper } from '@mui/material';
+import { Box, Typography, Grid, Paper } from '@mui/material';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import StarIcon from '@mui/icons-material/Star';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
@@ -27,7 +27,7 @@ const features = [
 
 const ChooseUs = () => {
   return (
-    <Box sx={{ backgroundColor: '#f0f0f0', paddingTop: 7,paddingBottom:15, px: 2 }}>
+    <Box sx={{ backgroundColor: 'white', pt: 7, pb: 15, px: 2 }}>
       <Typography
         variant="h4"
         align="center"
@@ -35,16 +35,24 @@ const ChooseUs = () => {
       >
         Why Choose Us
       </Typography>
-      <Grid container spacing={4} justifyContent="center">
+      <Grid
+        container
+        rowSpacing={{ xs: 6, md: 4 }} // Increased vertical spacing on mobile
+        columnSpacing={{ xs: 2, md: 4 }}
+        justifyContent="center"
+      >
         {features.map((feature, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Paper
               elevation={3}
               sx={{
-                p: 3,
+                p: 0,
+                py:2,
+                px:1,
                 textAlign: 'center',
                 borderRadius: 2,
                 height: '100%',
+                backgroundColor: 'whitesmoke',
                 transition: 'transform 0.3s, box-shadow 0.3s',
                 "&:hover": {
                   transform: "scale(1.03)",

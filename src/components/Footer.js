@@ -86,12 +86,6 @@ const Footer = () => {
               "Bangalore University",
               "Christ University",
               "Jain University",
-              "Dayananda Sagar University",
-              "Azim Premji University",
-              "PES University",
-              "RV University",
-              "Alliance University",
-              "MS Ramaiah University of Appplied Sciences"
             ].map((exam) => (
               <ListItem key={exam} sx={{ p: 0 }}>
                 <ListItemText
@@ -130,12 +124,6 @@ const Footer = () => {
               "SSMRV PU College",
               "NMKRV PU College",
               "RV PU College",
-              "Mount Carmel PU College",
-              "Presidency PU College",
-              "Ramaiah Composite Pre-University College",
-              "Narayana PU College",
-              "Jnana Jyothi PU College",
-              "St Vincent Pallotti PU College",
             ].map((uni) => (
               <ListItem key={uni} sx={{ p: 0 }}>
                 <ListItemText
@@ -190,154 +178,12 @@ const Footer = () => {
           <Typography variant="body2" sx={{ ml: 4, mb: 2 }}>
             +91 8867325152
           </Typography>
-
-          {/* ADDRESS */}
-          <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 1 }}>
-            <LocationOn />
-            <Typography variant="body2" sx={{ fontWeight: "bold" }}>
-              ADDRESS:
-            </Typography>
-          </Box>
-          <Typography variant="body2" sx={{ ml: 4 }}>
-            GETMYCOLLEGE, BASAVANGUDI CIRCLE,
-            <br />
-            BANGLORE, KARNATAKA-560004
-          </Typography>
         </Grid>
       </Grid>
 
-      {/* Divider */}
-      <Box sx={{ borderTop: "1px solid #999", my: 3 }} />
-
-      {/* Bottom Section */}
-      <Grid
-        container
-        spacing={{ xs: 2, md: 2 }}
-        alignItems="center"
-        justifyContent="space-between"
-      >
-        {/* Other Links */}
-        <Grid item xs={12} md={6}>
-          <Typography
-            variant="body1"
-            sx={{
-              fontWeight: "bold",
-              mb: 1,
-              textAlign: { xs: "center", md: "left" },
-            }}
-          >
-            Other Links
-          </Typography>
-          <Stack
-            direction="row"
-            spacing={2}
-            flexWrap="wrap"
-            justifyContent={{ xs: "center", md: "flex-start" }}
-          >
-            {[
-              "About Us",
-              "Contact Us",
-              "Privacy Policy",
-              "Terms & Conditions",
-              "Careers",
-            ].map((link) => (
-              <MuiLink
-                key={link}
-                href="#"
-                underline="hover"
-                color="inherit"
-                sx={{ fontSize: "14px" }}
-              >
-                {link}
-              </MuiLink>
-            ))}
-          </Stack>
-        </Grid>
-
-        {/* Social Media Icons */}
-        <Grid item xs={12} md={6}>
-          <Stack
-            direction="row"
-            spacing={2}
-            justifyContent={{ xs: "center", md: "flex-end" }}
-          >
-            <MuiLink
-              href="https://www.facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              color="inherit"
-            >
-              <Facebook
-                sx={{
-                  fontSize: 28,
-                  cursor: "pointer",
-                  "&:hover": { color: "#1976d2" },
-                }}
-              />
-            </MuiLink>
-            <MuiLink
-              href="https://www.instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              color="inherit"
-            >
-              <Instagram
-                sx={{
-                  fontSize: 28,
-                  cursor: "pointer",
-                  "&:hover": { color: "#E1306C" },
-                }}
-              />
-            </MuiLink>
-            <MuiLink
-              href="https://www.twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              color="inherit"
-            >
-              <Twitter
-                sx={{
-                  fontSize: 28,
-                  cursor: "pointer",
-                  "&:hover": { color: "#1DA1F2" },
-                }}
-              />
-            </MuiLink>
-            <MuiLink
-              href="http://www.youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              color="inherit"
-            >
-              <YouTube
-                sx={{
-                  fontSize: 28,
-                  cursor: "pointer",
-                  "&:hover": { color: "#FF0000" },
-                }}
-              />
-            </MuiLink>
-            <MuiLink
-              href="https://www.linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              color="inherit"
-            >
-              <LinkedIn
-                sx={{
-                  fontSize: 28,
-                  cursor: "pointer",
-                  "&:hover": { color: "#0A66C2" },
-                }}
-              />
-            </MuiLink>
-          </Stack>
-        </Grid>
-      </Grid>
 
       {/* Final Divider */}
       <Box sx={{ borderTop: "1px solid #999", my: 3 }} />
-
       {/* Copyright */}
       <Typography
         variant="body2"
@@ -345,7 +191,7 @@ const Footer = () => {
       >
         © {new Date().getFullYear()} -{" "}
         <MuiLink href="#" color="inherit" underline="hover">
-          GetMyCollege
+          SNInfoTech
         </MuiLink>
         . All Rights Reserved.
       </Typography>
